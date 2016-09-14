@@ -2,6 +2,7 @@ FROM ubuntu:14.04
 
 MAINTAINER AWSadmin https://github.com/AWSadmin
 
+RUN add-apt-repository ppa:ondrej/php
 RUN apt-get update -y
 RUN apt-get upgrade -y
 RUN apt-get install -y \
