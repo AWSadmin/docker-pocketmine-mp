@@ -2,13 +2,15 @@ FROM ubuntu:14.04
 
 MAINTAINER AWSadmin https://github.com/AWSadmin
 
-RUN add-apt-repository ppa:ondrej/php
 RUN apt-get update -y
 RUN apt-get upgrade -y
 RUN apt-get install -y \
-        wget \
+        software-properties-common wget \
         perl gcc g++ make automake libtool autoconf m4 \
-        gcc-multilib php7.0
+        gcc-multilib
+        
+RUN add-apt-repository ppa:ondrej/php
+RUN apt-get install -y php7.0
 
 RUN adduser --gecos 'PocketMine-MP' --disabled-password --home /pocketmine pocketmine
 
