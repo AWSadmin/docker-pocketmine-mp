@@ -1,13 +1,13 @@
 FROM ubuntu:14.04
 
-MAINTAINER 5t111111 https://github.com/5t111111
+MAINTAINER AWSadmin https://github.com/AWSadmin
 
 RUN apt-get update -y
 RUN apt-get upgrade -y
 RUN apt-get install -y \
         wget \
         perl gcc g++ make automake libtool autoconf m4 \
-        gcc-multilib
+        gcc-multilib php7.0
 
 RUN adduser --gecos 'PocketMine-MP' --disabled-password --home /pocketmine pocketmine
 
